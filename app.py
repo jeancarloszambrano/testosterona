@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from PIL import Image
 import matplotlib.pyplot as plt
 
 
@@ -9,6 +8,7 @@ Menu = ['Home', 'Modelo', 'Treinamento']
 
 st.sidebar.subheader('Páginas')
 pagina = st.sidebar.selectbox('Menu', Menu)
+st.sidebar.subheader('Grupo de pesquisa em Urológia')
 
 if pagina == 'Home':
 	#image = Image.open('logo.jpg')
