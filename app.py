@@ -58,8 +58,8 @@ if pagina == 'Modelo':
 	values = [Idade, GLI, TGL, HDL, CA, COL, LDL, HAS]
 	column_names = ['Age','GLI', 'TGL', 'HDL', 'CA', 'COL', 'LDL', 'HAS']
 	dados0 = pd.DataFrame(values, column_names)
-	if   dados0[0][x] == 'Sim': dados0[0][x] = 1
-	elif dados0[0][x]  == 'Não': dados0[0][x] = 0
+	if   dados0[0][1] == 'Sim': dados0[0][1] = 1
+	elif dados0[0][1]  == 'Não': dados0[0][1] = 0
 
 	st.markdown('---')
 
