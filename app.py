@@ -33,7 +33,7 @@ if pagina == 'Home':
 		 'em Urologia (Uros) da Universidade Estadual de Feira de Santana, desenvolvemos um aplicativo que permite'+
 		 'prever a deficiência de testosterona em homens entre 45 – 85 anos utilizando técnicas de Machine Learning (ML)')
 	
-	st.write('**Referencias')
+	st.write('**Referencias**')
 	
 	st.write('NOVAES, Monique Tonani et al. Prediction of secondary testosterone deficiency using machine learning:'+
 		 'A comparative analysis of ensemble and base classifiers, probability calibration, and sampling strategies'+
