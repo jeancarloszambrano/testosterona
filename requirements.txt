@@ -3,4 +3,4 @@ streamlit==1.7.0
 scikit-learn==1.0.2
 matplotlib==3.5.1
 pycaret==2.3.6
-PIL==22.0.4
+PIL==22.0.3
