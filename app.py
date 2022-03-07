@@ -40,4 +40,30 @@ if pagina == 'Home':
 		 'in a slightly imbalanced dataset. Informatics in Medicine Unlocked, v. 23, p. 100538, 2021. Disponível em:'+
 		 '<https://linkinghub.elsevier.com/retrieve/pii/S2352914821000289>. Acesso em: 4 mar. 2022.')
 
- 
+if pagina == 'Modelo':
+	st.title('MODELO PARA PREVER DEFICIÊNCIA DE TESTOSTERONA')
+	st.markdown('---')
+	st.write('Por favor, inserir os dados solicitados, tenha em consideração que o modelo esta desenvolvido para homens entre 20 e 85 anos.')
+	
+	Idade = st.number_input('Idade', min_value=45, max_value=85, step=1)
+	GLI = st.number_input("Glicemia: (em mg/dl)", min_value=12, max_value=383)
+	TGL = st.number_input("Triglicerídeos: (em mg/dl)", min_value=23, max_value=980)
+	HDL = st.number_input("Colesterol HDL:(em mg/dl)", min_value=13, max_value=115)
+	CA = st.number_input("Circunferência de cintura: (em cm)", min_value=43, max_value=198)
+	COL = st.number_input("Colesterol total: (em mg/dl)", min_value=50, max_value=363)
+	LDL = st.number_input("Colesterol LDL: (em mg/dl)", min_value=15, max_value=600)
+	HAS = st.selectbox("Hipertenso:", ["Sim", "Não"])
+
+	
+	values = [Idade, GLI, TGL, HDL, CA, COL, LDL, HAS]
+	column_names = ['Age','GLI', 'TGL', 'HDL', 'CA', 'COL', 'LDL', 'HAS']
+	dados0 = pd.DataFrame(values, column_names)
+	if   dados0[0][x] == 'Sim': dados0[0][x] = 1
+	elif dados0[0][x]  == 'Não': dados0[0][x] = 0
+
+	st.markdown('---')
+
+	if st.button('REALIZAR PREDIÇÃO'):
+		pred = float(predict_model(modelo1, data = dados0)['Label'].round(0))
+		saida = 'Se o valor for 1, é muito provável que você tenha deficiência de testosterona, o valor predito é de {:.0f}'.format(pred)
+		st.subheader(saida)
