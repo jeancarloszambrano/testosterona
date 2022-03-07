@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 Menu = ['Home', 'Modelo', 'Treinamento']
 
 st.sidebar.subheader('Páginas')
-pagina = st.sidebar.selectbox('Menu', paginas)
+pagina = st.sidebar.selectbox('Menu', Menu)
 
 if pagina == 'Home':
 	#image = Image.open('logo.jpg')
