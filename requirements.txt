@@ -3,4 +3,4 @@ streamlit
 scikit-learn
 matplotlib
 pycaret
-PIL==22.0.3
+PIL==22.0.4
