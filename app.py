@@ -5,7 +5,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 
-paginas = ['Home', 'Treinamento','Modelo']
+Menu = ['Home', 'Modelo', 'Treinamento']
 
 st.sidebar.subheader('Páginas')
 pagina = st.sidebar.selectbox('Menu', paginas)
