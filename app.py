@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from pycaret.classification import load_model, predict_model
+
 
 
 Menu = ['Home', 'Modelo', 'Treinamento']
