@@ -10,8 +10,8 @@ st.sidebar.subheader('Páginas')
 pagina = st.sidebar.selectbox('Menu', paginas)
 
 if pagina == 'Home':
-  image = Image.open('logo.jpg')
-  st.image(image, use_column_width=True, use_column_height=True)
+	image = Image.open('logo.jpg')
+	st.image(image, use_column_width=True, use_column_height=True)
 	st.title('APP PARA PREVER DEFICIÊNCIA DE TESTOSTERONA')
 	st.markdown('---')
 	st.write('A testosterona é o hormônio sexual mais importante entre os homens e afeta significativamente'+
