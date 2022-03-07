@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pycaret.classification import load_model, predict_model
 
-modelo1 = load_model('FinalLRCModel.pkl')
+modelo1 = load_model('FinalLRCModel')
 
 Menu = ['Home', 'Modelo', 'Treinamento']
 
