@@ -2,5 +2,5 @@ pandas
 streamlit
 scikit-learn
 matplotlib
-pycaret
+pycaret==2.3.6
 PIL==22.0.4
