@@ -96,13 +96,12 @@ if pagina == 'Treinamento':
 	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
 	with st.container():
 		st.write("Fig 1. AUC")
-		from PIL import Image
 		AUC = Image.open('AUC.png')
 	st.write("Graficos AUC, Recall e Matriz")
 	
-	st.image(AUC, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
-	Recall = Image.open('recall.png')
-	st.image(Recall, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
-	Matrix = Image.open('MatrixConf.png')
-	st.image(Matrix, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
+	#st.image(AUC, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
+	#Recall = Image.open('recall.png')
+	#st.image(Recall, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
+	#Matrix = Image.open('MatrixConf.png')
+	#st.image(Matrix, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
 	
