@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from pycaret.classification import load_model, predict_model
 
 # função para carregar o modelo
-modelo1 = load_model('FinalLRCModel')
+modelo1 = load_model('Final_Model')
 
 # função para carregar o dataset
 @st.cache(allow_output_mutation=True)
