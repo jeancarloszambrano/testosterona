@@ -4,7 +4,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pycaret.classification import load_model, predict_model
 
+# função para carregar o modelo
 modelo1 = load_model('FinalLRCModel')
+
+# função para carregar o dataset
+@st.cache(allow_output_mutation=True)
+def get_data():
+    return pd.read_csv('testost2.csv')
+
 
 Menu = ['Home', 'Modelo', 'Treinamento']
 
