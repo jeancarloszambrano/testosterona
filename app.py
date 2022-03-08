@@ -98,7 +98,7 @@ if pagina == 'Treinamento':
 		container.write("Fig 1. AUC")
 		AUC = Image.open('AUC.png')
 		st.image(AUC, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
-	container.write("Graficos AUC")
+		container.write("Graficos AUC")
 	
 
 	
