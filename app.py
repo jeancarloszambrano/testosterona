@@ -57,6 +57,9 @@ if pagina == 'Home':
 		 '<https://linkinghub.elsevier.com/retrieve/pii/S2352914821000289>. Acesso em: 4 mar. 2022.')
 
 if pagina == 'Modelo':
+	from PIL import Image
+	image = Image.open('logo.jpg')
+	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
 	st.title('MODELO PARA PREVER DEFICIÊNCIA DE TESTOSTERONA')
 	st.markdown('---')
 	st.write('Por favor, inserir os dados solicitados, tenha em consideração que o modelo esta desenvolvido para homens entre 20 e 85 anos.')
@@ -86,4 +89,8 @@ if pagina == 'Modelo':
 		output = '$' + str(output)
 	st.sucess('A estimativa é {}'.format(output))
 		
-		
+if pagina == 'Treinamento':
+	from PIL import Image
+	image = Image.open('logo.jpg')
+	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
+	
