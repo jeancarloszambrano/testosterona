@@ -21,7 +21,7 @@ def get_data():
 
 Menu = ['Home', 'Modelo', 'Treinamento']
 
-def run():
+
 	st.sidebar.subheader('Páginas')
 	pagina = st.sidebar.selectbox('Menu', Menu)
 	st.sidebar.subheader('Grupo de pesquisa em Urológia')
