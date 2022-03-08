@@ -13,7 +13,7 @@ pagina = st.sidebar.selectbox('Menu', Menu)
 st.sidebar.subheader('Grupo de pesquisa em Urológia')
 
 if pagina == 'Home':
-	image = Image.open('logo')
+	image = Image.open('logo.jpg')
 	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 	st.title('APP PARA PREVER DEFICIÊNCIA DE TESTOSTERONA')
 	st.markdown('---')
