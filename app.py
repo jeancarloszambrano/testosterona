@@ -59,9 +59,9 @@ if pagina == 'Modelo':
 	CA = st.number_input("Circunferência de cintura: (em cm)", min_value=43, max_value=198)
 	COL = st.number_input("Colesterol total: (em mg/dl)", min_value=50, max_value=363)
 	LDL = st.number_input("Colesterol LDL: (em mg/dl)", min_value=15, max_value=600)
-	HAS = st.selectbox("Hipertenso:", ["Sim", "Não"])
+	HAS_0 = st.selectbox("Hipertenso:", ["Sim", "Não"])
 
-	HAS = 1 if HAS == 'Sim' else 0
+	HAS_0 = 1.0 if HAS_0 == 'Sim' else 0.0
 	
 	values = [Idade, GLI, TGL, HDL, CA, COL, LDL, HAS]
 	column_names = ['Age','GLI', 'TGL', 'HDL', 'CA', 'COL', 'LDL', 'HAS']
