@@ -61,16 +61,16 @@ if pagina == 'Modelo':
 	LDL = st.number_input("Colesterol LDL: (em mg/dl)", min_value=15, max_value=600)
 	HAS = st.selectbox("Hipertenso:", ["Sim", "Não"])
 
+	HAS = '1' if HAS == 'Sim' else '0'
 	
 	values = [Idade, GLI, TGL, HDL, CA, COL, LDL, HAS]
 	column_names = ['Age','GLI', 'TGL', 'HDL', 'CA', 'COL', 'LDL', 'HAS']
-	dados0 = pd.DataFrame(values, column_names)
-	if   dados0[0][1] == 'Sim': dados0[0][1] = 1
-	elif dados0[0][1]  == 'Não': dados0[0][1] = 0
+	dados = pd.DataFrame(values, column_names)
+	
 
 	st.markdown('---')
 
 	if st.button('REALIZAR PREDIÇÃO'):
-		pred = float(predict_model(modelo1, data = dados0)['Label'].round(0))
+		pred = float(predict_model(modelo1, data = dados)['Label'].round(0))
 		saida = 'Se o valor for 1, é muito provável que você tenha deficiência de testosterona, o valor predito é de {:.0f}'.format(pred)
 		st.subheader(saida)
