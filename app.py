@@ -97,7 +97,7 @@ if pagina == 'Treinamento':
 	with st.container():
 		st.write("Fig 1. AUC")
 		# You can call any Streamlit command, including custom components:
-    		from PIL import Image
+		from PIL import Image
 		AUC = Image.open('AUC.png')
 		st.image(AUC, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
 		Recall = Image.open('recall.png')
