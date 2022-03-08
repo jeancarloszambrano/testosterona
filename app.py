@@ -52,16 +52,23 @@ if pagina == 'Modelo':
 	st.markdown('---')
 	st.write('Por favor, inserir os dados solicitados, tenha em consideração que o modelo esta desenvolvido para homens entre 20 e 85 anos.')
 	
-	Idade = st.number_input('Idade', min_value=45, max_value=85, step=1)
-	GLI = st.number_input("Glicemia: (em mg/dl)", min_value=12, max_value=383)
-	TGL = st.number_input("Triglicerídeos: (em mg/dl)", min_value=23, max_value=980)
-	HDL = st.number_input("Colesterol HDL:(em mg/dl)", min_value=13, max_value=115)
+	Idade = st.number_input('Idade', min_value=21, max_value=97, step=1)
+	GLI = st.number_input("Glicemia: (em mg/dl)", min_value=10, max_value=384)
+	TGL = st.number_input("Triglicerídeos: (em mg/dl)", min_value=1, max_value=980)
+	HDL = st.number_input("Colesterol HDL:(em mg/dl)", min_value=9, max_value=116)
 	CA = st.number_input("Circunferência de cintura: (em cm)", min_value=43, max_value=198)
-	COL = st.number_input("Colesterol total: (em mg/dl)", min_value=50, max_value=363)
-	LDL = st.number_input("Colesterol LDL: (em mg/dl)", min_value=15, max_value=600)
+	COL = st.number_input("Colesterol total: (em mg/dl)", min_value=16, max_value=363)
+	LDL = st.number_input("Colesterol LDL: (em mg/dl)", min_value=10, max_value=832)
 	HAS_0 = st.selectbox("Hipertenso:", ["Sim", "Não"])
 
 	HAS_0 = 1.0 if HAS_0 == 'Sim' else 0.0
+	Idade = (Idade-59.986613)/11.968758
+	GLI = (GLI -102.488962)/30.136905
+	TGL = (TGL-155.388964)/91.757382
+	HDL = (HDL-46.100282)/10.987684
+	CA = (CA-98.983091)/10.597166
+	COL = (COL-190.940348)/41.345212
+	LDL = (LDL-117.237201)/39.715249
 	
 	values = [Idade, GLI, TGL, HDL, CA, COL, LDL, HAS_0]
 	column_names = ['Age','GLI', 'TGL', 'HDL', 'CA', 'COL', 'LDL', 'HAS_0']
