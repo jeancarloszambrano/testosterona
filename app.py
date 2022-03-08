@@ -8,7 +8,7 @@ from pycaret.classification import load_model, predict_model
 modelo1 = load_model('FinalModel')
 
 def predict(model, input_df):
-	predictiones_df = predict_model(estimator=modelo1, data=input_df)
+	predictiones_df = predict_model(estimator=modelo1, data=dados)
 	predictions = predictiones_df['Label'][0]
 	return predictions
 
@@ -22,10 +22,10 @@ def get_data():
 Menu = ['Home', 'Modelo', 'Treinamento']
 
 
-st.sidebar.subheader('Páginas')
+st.sidebar.subheader('UROS')
 pagina = st.sidebar.selectbox('Menu', Menu)
 st.sidebar.subheader('Grupo de pesquisa em Urológia')
-st.sidebar.subheader('image')
+st.sidebar.subheader('Universidade Estadual de Feira de Santana')
 
 if pagina == 'Home':
 	from PIL import Image
