@@ -61,7 +61,7 @@ if pagina == 'Modelo':
 	LDL = st.number_input("Colesterol LDL: (em mg/dl)", min_value=15, max_value=600)
 	HAS = st.selectbox("Hipertenso:", ["Sim", "Não"])
 
-	HAS = '1' if HAS == 'Sim' else '0'
+	HAS = 1 if HAS == 'Sim' else 0
 	
 	values = [Idade, GLI, TGL, HDL, CA, COL, LDL, HAS]
 	column_names = ['Age','GLI', 'TGL', 'HDL', 'CA', 'COL', 'LDL', 'HAS']
