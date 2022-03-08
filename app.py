@@ -95,10 +95,10 @@ if pagina == 'Treinamento':
 	image = Image.open('logo.jpg')
 	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
 	container = st.container()
-		container.write("Fig 1. AUC")
-		AUC = Image.open('AUC.png')
-		st.image(AUC, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
-		container.write("Graficos AUC")
+	container.write("Fig 1. AUC")
+	AUC = Image.open('AUC.png')
+	container.image(AUC, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
+	container.write("Graficos AUC")
 	
 
 	
