@@ -25,9 +25,7 @@ Menu = ['Home', 'Modelo', 'Treinamento']
 st.sidebar.subheader('Páginas')
 pagina = st.sidebar.selectbox('Menu', Menu)
 st.sidebar.subheader('Grupo de pesquisa em Urológia')
-from PIL import Image
-image = Image.open('logo.jpg')
-st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
+st.sidebar.subheader('image')
 
 if pagina == 'Home':
 	from PIL import Image
