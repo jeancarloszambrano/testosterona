@@ -14,7 +14,7 @@ st.sidebar.subheader('Grupo de pesquisa em Urológia')
 
 if pagina == 'Home':
 	image = Image.open('logo.jpg')
-	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
 	st.title('APP PARA PREVER DEFICIÊNCIA DE TESTOSTERONA')
 	st.markdown('---')
 	st.write('A testosterona é o hormônio sexual mais importante entre os homens e afeta significativamente'+
