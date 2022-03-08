@@ -9,7 +9,7 @@ modelo1 = load_model('FinalModel')
 
 def predict(model, input_df):
 	predictiones_df = predict_model(estimator=modelo1, data=dados)
-	predictions = predictiones_df['Label'][0]
+	predic = predictiones_df['Label'][0]
 	return predictions
 
 
@@ -85,9 +85,10 @@ if pagina == 'Modelo':
 	st.markdown('---')
 
 	if st.button('REALIZAR PREDIÇÃO'):
-		output = predict(modelo1=modelo1, input_df=dados)
-		output = '$' + str(output)
-	st.sucess('A estimativa é {}'.format(output))
+		pred = float(predict_model(modelo1, data = dados)['Label'].round(2))
+		saida = 'O valor predito é de{:.2f}'.format(pred)
+		st.subheader(saida)
+		
 		
 if pagina == 'Treinamento':
 	from PIL import Image
