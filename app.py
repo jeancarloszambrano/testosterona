@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from pycaret.classification import load_model, predict_model
 
 # função para carregar o modelo
-modelo1 = load_model('Final_Model')
+modelo1 = load_model('FinalModel')
 
 # função para carregar o dataset
 @st.cache(allow_output_mutation=True)
@@ -62,13 +62,7 @@ if pagina == 'Modelo':
 	HAS_0 = st.selectbox("Hipertenso:", ["Sim", "Não"])
 
 	HAS_0 = 1.0 if HAS_0 == 'Sim' else 0.0
-	Idade = (Idade-59.986613)/11.968758
-	GLI = (GLI -102.488962)/30.136905
-	TGL = (TGL-155.388964)/91.757382
-	HDL = (HDL-46.100282)/10.987684
-	CA = (CA-98.983091)/10.597166
-	COL = (COL-190.940348)/41.345212
-	LDL = (LDL-117.237201)/39.715249
+	
 	
 	values = [Idade, GLI, TGL, HDL, CA, COL, LDL, HAS_0]
 	column_names = ['Age','GLI', 'TGL', 'HDL', 'CA', 'COL', 'LDL', 'HAS_0']
