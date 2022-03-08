@@ -104,5 +104,5 @@ if pagina == 'Treinamento':
 	Recall = Image.open('recall.png')
 	st.image(Recall, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
 	Matrix = Image.open('MatrixConf.png')
-		st.image(Matrix, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
+	st.image(Matrix, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
 	
