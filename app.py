@@ -7,6 +7,12 @@ from pycaret.classification import load_model, predict_model
 # função para carregar o modelo
 modelo1 = load_model('FinalModel')
 
+def predict(model, input_df):
+	predictiones_df = predict_model(estimator=modelo1, data=input_df)
+	predictions = predictiones_df['Label'][0]
+	return predictions
+
+
 # função para carregar o dataset
 @st.cache(allow_output_mutation=True)
 def get_data():
@@ -15,16 +21,18 @@ def get_data():
 
 Menu = ['Home', 'Modelo', 'Treinamento']
 
-st.sidebar.subheader('Páginas')
-pagina = st.sidebar.selectbox('Menu', Menu)
-st.sidebar.subheader('Grupo de pesquisa em Urológia')
+def run():
+	st.sidebar.subheader('Páginas')
+	pagina = st.sidebar.selectbox('Menu', Menu)
+	st.sidebar.subheader('Grupo de pesquisa em Urológia')
 
-if pagina == 'Home':
-	#image = Image.open('logo.jpg')
-	#st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
-	st.title('APP PARA PREVER DEFICIÊNCIA DE TESTOSTERONA')
-	st.markdown('---')
-	st.write('A testosterona é o hormônio sexual mais importante entre os homens e afeta significativamente'+
+	if pagina == 'Home':
+		from PIL import Image
+		image = Image.open('logo.jpg')
+		st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
+		st.title('APP PARA PREVER DEFICIÊNCIA DE TESTOSTERONA')
+		st.markdown('---')
+		st.write('A testosterona é o hormônio sexual mais importante entre os homens e afeta significativamente'+
 		 'o bem-estar físico e psicológico dos homens. Pacientes com Síndrome de Deficiência de Testosterona (TDS)'+
 		 'podem apresentar hipogonadismo, uma condição definida por baixos níveis séricos de testosterona combinado'+
 		 'com sintomas clínicos. Esta condição está associada a diversas comorbidades, como síndrome metabólica, '+
@@ -40,38 +48,41 @@ if pagina == 'Home':
 		 'em Urologia (Uros) da Universidade Estadual de Feira de Santana, desenvolvemos um aplicativo que permite'+
 		 'prever a deficiência de testosterona em homens entre 45 – 85 anos utilizando técnicas de Machine Learning (ML)')
 	
-	st.write('**Referencias**')
+		st.write('**Referencias**')
 	
-	st.write('NOVAES, Monique Tonani et al. Prediction of secondary testosterone deficiency using machine learning:'+
+		st.write('NOVAES, Monique Tonani et al. Prediction of secondary testosterone deficiency using machine learning:'+
 		 'A comparative analysis of ensemble and base classifiers, probability calibration, and sampling strategies'+
 		 'in a slightly imbalanced dataset. Informatics in Medicine Unlocked, v. 23, p. 100538, 2021. Disponível em:'+
 		 '<https://linkinghub.elsevier.com/retrieve/pii/S2352914821000289>. Acesso em: 4 mar. 2022.')
 
-if pagina == 'Modelo':
-	st.title('MODELO PARA PREVER DEFICIÊNCIA DE TESTOSTERONA')
-	st.markdown('---')
-	st.write('Por favor, inserir os dados solicitados, tenha em consideração que o modelo esta desenvolvido para homens entre 20 e 85 anos.')
+	if pagina == 'Modelo':
+		st.title('MODELO PARA PREVER DEFICIÊNCIA DE TESTOSTERONA')
+		st.markdown('---')
+		st.write('Por favor, inserir os dados solicitados, tenha em consideração que o modelo esta desenvolvido para homens entre 20 e 85 anos.')
 	
-	Idade = st.number_input('Idade', min_value=21, max_value=97, step=1)
-	GLI = st.number_input("Glicemia: (em mg/dl)", min_value=10, max_value=384)
-	TGL = st.number_input("Triglicerídeos: (em mg/dl)", min_value=1, max_value=980)
-	HDL = st.number_input("Colesterol HDL:(em mg/dl)", min_value=9, max_value=116)
-	CA = st.number_input("Circunferência de cintura: (em cm)", min_value=43, max_value=198)
-	COL = st.number_input("Colesterol total: (em mg/dl)", min_value=16, max_value=363)
-	LDL = st.number_input("Colesterol LDL: (em mg/dl)", min_value=10, max_value=832)
-	HAS_0 = st.selectbox("Hipertenso:", ["Sim", "Não"])
+		Idade = st.number_input('Idade', min_value=21, max_value=97, step=1)
+		GLI = st.number_input("Glicemia: (em mg/dl)", min_value=10, max_value=384)
+		TGL = st.number_input("Triglicerídeos: (em mg/dl)", min_value=1, max_value=980)
+		HDL = st.number_input("Colesterol HDL:(em mg/dl)", min_value=9, max_value=116)
+		CA = st.number_input("Circunferência de cintura: (em cm)", min_value=43, max_value=198)
+		COL = st.number_input("Colesterol total: (em mg/dl)", min_value=16, max_value=363)
+		LDL = st.number_input("Colesterol LDL: (em mg/dl)", min_value=10, max_value=832)
+		HAS_0 = st.selectbox("Hipertenso:", ["Sim", "Não"])
 
-	HAS_0 = 1.0 if HAS_0 == 'Sim' else 0.0
+		HAS_0 = 1.0 if HAS_0 == 'Sim' else 0.0
 	
+		output.""
+		
+		values = [Idade, GLI, TGL, HDL, CA, COL, LDL, HAS_0]
+		column_names = ['Age','GLI', 'TGL', 'HDL', 'CA', 'COL', 'LDL', 'HAS_0']
+		dados = pd.DataFrame(values, column_names)
 	
-	values = [Idade, GLI, TGL, HDL, CA, COL, LDL, HAS_0]
-	column_names = ['Age','GLI', 'TGL', 'HDL', 'CA', 'COL', 'LDL', 'HAS_0']
-	dados = pd.DataFrame(values, column_names)
-	
+		
+		st.markdown('---')
 
-	st.markdown('---')
-
-	if st.button('REALIZAR PREDIÇÃO'):
-		pred = float(predict_model(modelo1, data = dados)['Label'].round(0))
-		saida = 'Se o valor for 1, é muito provável que você tenha deficiência de testosterona, o valor predito é de {:.0f}'.format(pred)
-		st.subheader(saida)
+		if st.button('REALIZAR PREDIÇÃO'):
+			output = predict(modelo1=modelo1, input_df=input_df)
+			output = '$' + str(output)
+		st.sucess('A estimativa é {}'.format(output))
+		
+		
