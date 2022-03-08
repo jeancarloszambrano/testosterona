@@ -19,7 +19,7 @@ def get_data():
     return pd.read_csv('testost2.csv')
 
 
-Menu = ['Home', 'Modelo', 'Treinamento']
+Menu = ['Home', 'Modelo', 'Caracteristicas']
 
 
 st.sidebar.subheader('UROS')
@@ -90,7 +90,7 @@ if pagina == 'Modelo':
 		st.subheader(saida)
 		
 		
-if pagina == 'Treinamento':
+if pagina == 'Caracteristicas':
 	from PIL import Image
 	image = Image.open('logo.jpg')
 	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
