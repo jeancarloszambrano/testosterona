@@ -85,9 +85,7 @@ if pagina == 'Modelo':
 	HAS = 1.0 if HAS == 'Sim' else 0.0
 	
 	
-		
-	values = [Idade, GLI, TGL, HDL, CA, COL, LDL, HAS]
-	column_names = ['Age','GLI', 'TGL', 'HDL', 'CA', 'COL', 'LDL', 'HAS']
+	dados0 = {'Age':[Idade], 'GLI':[GLI], 'TGL':[TGL], 'HDL':[HDL], 'CA':[CA], 'COL':[COL], 'LDL':[LDL], 'HAS':[HAS]}
 	dados = pd.DataFrame(values, column_names, ignore_index = True)
 	
 		
