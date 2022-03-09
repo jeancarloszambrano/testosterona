@@ -24,8 +24,9 @@ Menu = ['Home', 'Modelo', 'Caracteristicas']
 
 st.sidebar.subheader('UROS')
 pagina = st.sidebar.selectbox('Menu', Menu)
-st.sidebar.subheader('Grupo de pesquisa em Urológia')
-st.sidebar.subheader('Universidade Estadual de Feira de Santana')
+st.sidebar.write('')
+st.sidebar.subheader('*Grupo de pesquisa em Urológia*')
+st.sidebar.subheader('*Universidade Estadual de Feira de Santana*')
 st.sidebar.subheader('Monique Tonani Novais')
 st.sidebar.subheader('Anna Paloma Martins Rocha Ribeiro')
 st.sidebar.subheader('Caroline Santos Silva')
