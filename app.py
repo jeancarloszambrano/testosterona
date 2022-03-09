@@ -95,6 +95,9 @@ if pagina == 'Modelo':
 		pred = float(predict_model(modelo1, data = dados)['Label'].round(0))
 		saida = 'O valor predito é de {:.0f}'.format(pred)
 		st.subheader(saida)
+		saida2 = '{:.0f}'.format(pred)
+		if saida2 == '0': st.subheader('Predição de Diagnóstico: **NEGATIVO PARA DEFICIENCIA DE TESTOTERONA**')
+			else st.subheader('Predição de Diagnóstico: **POSITIVO PARA DEFICIENCIA DE TESTOTERONA**')
 		
 		
 		
