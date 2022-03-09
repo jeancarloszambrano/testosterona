@@ -93,7 +93,7 @@ if pagina == 'Modelo':
 
 	if st.button('REALIZAR PREDIÇÃO'):
 		pred = float(predict_model(modelo1, data = dados)['Label'].round(2))
-		saida = 'O valor predito é de{:.2f}'.format(pred)
+		saida = 'O valor predito é de {:.2f}'.format(pred)
 		st.subheader(saida)
 		
 		
