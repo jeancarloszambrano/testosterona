@@ -27,11 +27,11 @@ pagina = st.sidebar.selectbox('Menu', Menu)
 st.sidebar.write('')
 st.sidebar.subheader('*Grupo de pesquisa em Urológia*')
 st.sidebar.subheader('*Universidade Estadual de Feira de Santana*')
-st.sidebar.subheader('Monique Tonani Novais')
-st.sidebar.subheader('Anna Paloma Martins Rocha Ribeiro')
-st.sidebar.subheader('Caroline Santos Silva')
-st.sidebar.subheader('Jean Carlos Zambrano Contreras')
-st.sidebar.subheader('José de Bessa Júnior')
+st.sidebar.subheader('**Monique Tonani Novais**')
+st.sidebar.subheader('**Anna Paloma Martins Rocha Ribeiro**')
+st.sidebar.subheader('**Caroline Santos Silva**')
+st.sidebar.subheader('**Jean Carlos Zambrano Contreras**')
+st.sidebar.subheader('**José de Bessa Júnior**')
 
 if pagina == 'Home':
 	from PIL import Image
