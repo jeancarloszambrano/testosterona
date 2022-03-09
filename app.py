@@ -86,7 +86,7 @@ if pagina == 'Modelo':
 	
 	
 	dados0 = {'Age':[Idade], 'GLI':[GLI], 'TGL':[TGL], 'HDL':[HDL], 'CA':[CA], 'COL':[COL], 'LDL':[LDL], 'HAS':[HAS]}
-	dados = pd.DataFrame(values, column_names, ignore_index = True)
+	dados = pd.DataFrame(dados0)
 	
 		
 	st.markdown('---')
