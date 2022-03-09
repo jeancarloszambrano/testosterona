@@ -82,12 +82,12 @@ if pagina == 'Modelo':
 	LDL = st.number_input("Colesterol LDL: (em mg/dl)", min_value=10, max_value=832)
 	HAS = st.selectbox("Hipertenso:", ["Sim", "Não"])
 
-	HAS = 1.0 if HAS_0 == 'Sim' else 0.0
+	HAS = 1.0 if HAS == 'Sim' else 0.0
 	
 	
 		
-	values = [Idade, GLI, TGL, HDL, CA, COL, LDL, HAS_0]
-	column_names = ['Age','GLI', 'TGL', 'HDL', 'CA', 'COL', 'LDL', 'HAS_0']
+	values = [Idade, GLI, TGL, HDL, CA, COL, LDL, HAS]
+	column_names = ['Age','GLI', 'TGL', 'HDL', 'CA', 'COL', 'LDL', 'HAS']
 	dados = pd.DataFrame(values, column_names)
 	
 		
