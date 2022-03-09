@@ -96,7 +96,7 @@ if pagina == 'Modelo':
 		saida = 'O valor predito é de {:.0f}'.format(pred)
 		st.subheader(saida)
 		saida2 = '{:.0f}'.format(pred)
-		st.subheader('Predição de Diagnóstico: **NEGATIVO PARA DEFICIENCIA DE TESTOTERONA**') if saida2 == 0 else st.subheader('Predição de Diagnóstico: **POSITIVO PARA DEFICIENCIA DE TESTOTERONA**')
+		st.subheader('**NEGATIVO PARA DEFICIENCIA DE TESTOTERONA**') if saida2 == 0 else st.subheader('**POSITIVO PARA DEFICIENCIA DE TESTOTERONA**')
 			
 		
 		
