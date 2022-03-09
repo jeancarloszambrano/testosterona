@@ -4,20 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pycaret.classification import load_model, predict_model
 
-# função para carregar o modelo
-modelo1 = load_model('FinalModel')
-
-def predict(model, input_df):
-	predictiones_df = predict_model(estimator=modelo1, data=dados)
-	predic = predictiones_df['Label'][0]
-	return predictions
-
-
-# função para carregar o dataset
-@st.cache(allow_output_mutation=True)
-def get_data():
-    return pd.read_csv('testost2.csv')
-
 
 Menu = ['Home', 'Modelo', 'Caracteristicas']
 
@@ -69,6 +55,23 @@ if pagina == 'Modelo':
 	st.title('MODELO PARA PREVER DEFICIÊNCIA DE TESTOSTERONA')
 	st.markdown('---')
 	st.write('Por favor, inserir os dados solicitados, tenha em consideração que o modelo esta desenvolvido para homens entre 20 e 85 anos.')
+	
+	# função para carregar o modelo
+	modelo1 = load_model('Final_Model')
+
+	def predict(modelo1, dados):
+		predictiones_df = predict_model(estimator=modelo1, data=dados)
+		predic = predictiones_df['Label'][0]
+		return predictions
+
+
+	# função para carregar o dataset
+	@st.cache(allow_output_mutation=True)
+	def get_data():
+    		return pd.read_csv('testost2.csv')
+
+	
+		
 	
 	Idade = st.number_input('Idade', min_value=21, max_value=97, step=1)
 	GLI = st.number_input("Glicemia: (em mg/dl)", min_value=10, max_value=384)
