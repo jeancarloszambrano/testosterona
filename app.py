@@ -8,8 +8,8 @@ from pycaret.classification import load_model, predict_model
 Menu = ['Home', 'Modelo', 'Modelagem']
 
 from PIL import Image
-image = Image.open('UEFS.jpg')
-st.sidebar.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
+LOGO = Image.open('UEFS.jpg')
+st.sidebar.image(LOGO, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
 st.sidebar.subheader('Universidade Estadual de Feira de Santana')
 st.sidebar.subheader('Grupo de pesquisa em Urológia')
 
