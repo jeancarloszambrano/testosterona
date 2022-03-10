@@ -46,12 +46,9 @@ if pagina == 'Home':
 		 'em Urologia (Uros) da Universidade Estadual de Feira de Santana, desenvolvemos um aplicativo que permite'+
 		 'prever a deficiência de testosterona em homens utilizando parâmetros simples com técnicas de Machine Learning (ML)')
 	
-	st.write('**Referencias**')
+	st.write('**Dr. José de Bessa Júnior**')
 	
-	st.write('NOVAES, Monique Tonani et al. Prediction of secondary testosterone deficiency using machine learning:'+
-		 'A comparative analysis of ensemble and base classifiers, probability calibration, and sampling strategies'+
-		 'in a slightly imbalanced dataset. Informatics in Medicine Unlocked, v. 23, p. 100538, 2021. Disponível em:'+
-		 '<https://linkinghub.elsevier.com/retrieve/pii/S2352914821000289>. Acesso em: 4 mar. 2022.')
+	
 
 if pagina == 'Modelo':
 	
@@ -108,7 +105,6 @@ if pagina == 'Modelagem':
 	image = Image.open('logo.jpg')
 	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
 	st.markdown('---')
-	
 	st.title('MODELAGEM DOS DADOS')
 	
 	st.write('Aprendizado de Máquina (ou Machine Learning) é uma das técnicas utilizadas'+
@@ -180,6 +176,8 @@ if pagina == 'Modelagem':
 	st.image(Recall, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
 	
 	st.write('**Referencias**')
-	
 	st.write('')
-		
+	st.write('NOVAES, Monique Tonani et al. Prediction of secondary testosterone deficiency using machine learning:'+
+		 'A comparative analysis of ensemble and base classifiers, probability calibration, and sampling strategies'+
+		 'in a slightly imbalanced dataset. Informatics in Medicine Unlocked, v. 23, p. 100538, 2021. Disponível em:'+
+		 '<https://linkinghub.elsevier.com/retrieve/pii/S2352914821000289>. Acesso em: 4 mar. 2022.')	
