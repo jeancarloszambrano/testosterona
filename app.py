@@ -7,17 +7,21 @@ from pycaret.classification import load_model, predict_model
 
 Menu = ['Home', 'Modelo', 'Modelagem']
 
-
-st.sidebar.subheader('UROS')
-pagina = st.sidebar.selectbox('Menu', Menu)
-st.sidebar.write('')
-st.sidebar.subheader('Grupo de pesquisa em Urológia')
+from PIL import Image
+image = Image.open('UEFS.jpg')
+st.sidebar.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
 st.sidebar.subheader('Universidade Estadual de Feira de Santana')
+st.sidebar.subheader('Grupo de pesquisa em Urológia')
+
+pagina = st.sidebar.selectbox('Navegação', Menu)
+
+st.sidebar.write('')
+
 st.sidebar.write('*Monique Tonani Novais*')
-st.sidebar.subheader('*Anna Paloma Martins Rocha Ribeiro*')
-st.sidebar.subheader('*Caroline Santos Silva*')
-st.sidebar.subheader('*Jean Carlos Zambrano Contreras*')
-st.sidebar.subheader('*José de Bessa Júnior*')
+st.sidebar.write('*Anna Paloma Martins Rocha Ribeiro*')
+st.sidebar.write('*Caroline Santos Silva*')
+st.sidebar.write('*Jean Carlos Zambrano Contreras*')
+st.sidebar.write('*José de Bessa Júnior*')
 
 if pagina == 'Home':
 	from PIL import Image
