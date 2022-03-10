@@ -133,7 +133,7 @@ if pagina == 'Modelagem':
 		 'Negativos são considerados mais prejudiciais que os Falsos Positivos. Os'+
 		 'resultados são apresentados na tabela 1.')
 	
-	st.write('**Tabela 1. Algoritmos de aprendizado de maquina**)
+	st.write('**Tabela 1. Algoritmos de aprendizado de maquina**')
 	from PIL import Image	 
 	tabela1 = Image.open('tabela1.png')
 	st.image(tabela1, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
