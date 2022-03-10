@@ -133,7 +133,7 @@ if pagina == 'Modelagem':
 		 'Negativos são considerados mais prejudiciais que os Falsos Positivos. Os'+
 		 'resultados são apresentados na tabela 1.')
 	
-	st.write('**Tabela 1. Algoritmos de aprendizado de maquina.**)
+	st.write('**Tabela 1. Algoritmos de aprendizado de maquina**)
 	from PIL import Image	 
 	tabela1 = Image.open('tabela1.png')
 	st.image(tabela1, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
@@ -161,7 +161,7 @@ if pagina == 'Modelagem':
 		 'esperado é positivo e o modelo resulta em positivo) e Verdadeiros Negativos'+
 		 '(quando o resultado esperado é negativo e o modelo resulta em negativo).')
 		 
-	st.write('**Tabela 2. Matriz de confusão**')]
+	st.write('**Tabela 2. Matriz de confusão**')
 	Matrix = Image.open('MatrixConf.png')
 	st.image(Matrix, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="png")
 	
