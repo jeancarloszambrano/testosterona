@@ -104,8 +104,8 @@ if pagina == 'Modelagem':
 	from PIL import Image
 	image = Image.open('logo.jpg')
 	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
-	st.markdown('---')
 	st.title('MODELAGEM DOS DADOS')
+	st.markdown('---')
 	
 	st.write('Aprendizado de Máquina (ou Machine Learning) é uma das técnicas utilizadas'+
 		 'na Inteligência Artificial que usa algoritmos baseados em matemática e'+
