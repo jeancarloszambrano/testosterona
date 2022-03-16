@@ -74,12 +74,12 @@ if pagina == 'Modelo':
     		return pd.read_csv('testost2.csv')
 
 	Idade = st.slider('Idade', min_value=21, max_value=97, value=60)
-	GLI = st.slider("Glicemia: (em mg/dl)", min_value=10, max_value=384, value=70)
-	TGL = st.slider("Triglicerídeos: (em mg/dl)", min_value=1, max_value=980, value=150)
-	HDL = st.slider("Colesterol HDL:(em mg/dl)", min_value=9, max_value=116, value=40)
-	CA = st.slider("Circunferência de cintura: (em cm)", min_value=43, max_value=198, value=94)
-	COL = st.slider("Colesterol total: (em mg/dl)", min_value=16, max_value=363, value=190)
-	LDL = st.slider("Colesterol LDL: (em mg/dl)", min_value=10, max_value=832, value=130)
+	GLI = st.slider("Glicemia: (em mg/dl)", min_value=10, max_value=384, value=69)
+	TGL = st.slider("Triglicerídeos: (em mg/dl)", min_value=1, max_value=980, value=149)
+	HDL = st.slider("Colesterol HDL:(em mg/dl)", min_value=9, max_value=116, value=61)
+	CA = st.slider("Circunferência de cintura: (em cm)", min_value=43, max_value=198, value=93)
+	COL = st.slider("Colesterol total: (em mg/dl)", min_value=16, max_value=363, value=189)
+	LDL = st.slider("Colesterol LDL: (em mg/dl)", min_value=10, max_value=832, value=129)
 	HAS = st.selectbox("Hipertenso:", ["Sim", "Não"])
 
 	
@@ -97,9 +97,16 @@ if pagina == 'Modelo':
 		saida = '{:.0f}'.format(pred)
 		st.subheader(saida)
 		saida2 = '{:.0f}'.format(pred)
-		st.subheader('NEGATIVO PARA DEFICIÊNCIA DE TESTOSTERONA') if saida == '0' else st.subheader('POSITIVO PARA DEFICIÊNCIA DE TESTOSTERONA')
+		if saida == '0':
+			st.subheader('NEGATIVO PARA DEFICIÊNCIA DE TESTOSTERONA')
+		else:
+			st.subheader('POSITIVO PARA DEFICIÊNCIA DE TESTOSTERONA')
 	
-	st.write('Homens de {Idade} anos de idade com:')
+	if (HAS == 1):
+		st.write('Homens hipertenso com:')
+	else:
+		st.write('Homem com:')
+	
 	if (GLI < 70):
 		st.write('Glicemia baixa ou hipoglicemia.') 
 	elif (GLI >= 70) and (GLI < 100):
