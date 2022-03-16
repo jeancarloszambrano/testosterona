@@ -99,7 +99,7 @@ if pagina == 'Modelo':
 		saida2 = '{:.0f}'.format(pred)
 		st.subheader('NEGATIVO PARA DEFICIÊNCIA DE TESTOSTERONA') if saida == '0' else st.subheader('POSITIVO PARA DEFICIÊNCIA DE TESTOSTERONA')
 		st.write('Glicemia baixa ou hipoglicemia.') 
-		elif GLI < 70 
+		if GLI < 70 
 		st.write('Glicemia normal.') 
 		elif (GLI >= 70) and (GLI < 100) 
 		st.write('Glicemia alterada.') 
