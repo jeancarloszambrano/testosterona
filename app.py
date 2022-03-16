@@ -105,7 +105,8 @@ if pagina == 'Modelo':
 		st.write('Glicemia normal.')
 	elif (GLI >= 100) and (GLI <= 125): 
 		st.write('Glicemia alterada.') 
-	else st.write('Diabético ou alta propensão pra desenvolver diabetes.') 
+	else:
+		st.write('Diabético ou alta propensão pra desenvolver diabetes.') 
 		
 		
 if pagina == 'Modelagem':
