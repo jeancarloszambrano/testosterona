@@ -95,7 +95,7 @@ if pagina == 'Modelo':
 	if st.button('REALIZAR PREDIÇÃO'):
 		pred = float(predict_model(modelo1, data = dados)['Label'].round(0))
 		saida = '{:.0f}'.format(pred)
-		st.subheader(saida)
+		#st.subheader(saida)
 		#saida2 = '{:.0f}'.format(pred)
 		if saida == '0':
 			st.subheader('NEGATIVO PARA DEFICIÊNCIA DE TESTOSTERONA')
@@ -105,7 +105,7 @@ if pagina == 'Modelo':
 		if (HAS == 1):
 			st.write('Homem hipertenso com:')
 		else:
-			st.write('Homem com:')
+			st.write('Homem sem hipertensão ou pressão arterial controlada com:')
 
 		if (GLI < 70):
 			st.write('Glicemia baixa ou hipoglicemia.') 
