@@ -90,7 +90,7 @@ if pagina == 'Modelo':
 	dados = pd.DataFrame(dados0)
 	
 		
-	st.markdown('---')
+	#st.markdown('---')
 
 	if st.button('REALIZAR PREDIÇÃO'):
 		pred = float(predict_model(modelo1, data = dados)['Label'].round(0))
