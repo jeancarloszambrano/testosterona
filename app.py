@@ -99,6 +99,7 @@ if pagina == 'Modelo':
 		saida2 = '{:.0f}'.format(pred)
 		st.subheader('NEGATIVO PARA DEFICIÊNCIA DE TESTOSTERONA') if saida == '0' else st.subheader('POSITIVO PARA DEFICIÊNCIA DE TESTOSTERONA')
 	
+	st.write('Homens de {Idade} anos de idade com:')
 	if (GLI < 70):
 		st.write('Glicemia baixa ou hipoglicemia.') 
 	elif (GLI >= 70) and (GLI < 100):
@@ -106,8 +107,43 @@ if pagina == 'Modelo':
 	elif (GLI >= 100) and (GLI <= 125): 
 		st.write('Glicemia alterada.') 
 	else:
-		st.write('Diabético ou alta propensão pra desenvolver diabetes.') 
+		st.write('Diabetes ou alta propensão pra desenvolver diabetes. Consulte o seu médico imediatamente.') 
 		
+	if (TGL <= 150):
+		st.write('Triglicerídeos no nivel desejável.')
+	elif (TGL > 150) and (TGL <= 199):
+		st.write ('Triglicerídeos no limite.')
+	elif (TGL > 199) and (TGL <= 499):
+		st.write('Triglicerídeos alto.')
+	else:
+		st.write('Triglicerídeos muito alto.')
+	
+	if (HDL <= 40):
+		st.write('HDL baixo, Isso significa alto risco de desenvolver doenças cardiovasculares.')
+	elif (HDL > 40) and (HDL <= 60):
+		st.write('HDL abaixo do ideal.')
+	else:
+		st.write('HDL ideal.')
+	
+	if (CA <= 94):
+		st.write('Circunferência de cintura normal.')
+	elif (CA > 94) and (CA < 101):
+		st.write('Circunferência de cintura aumentada.')
+	else:
+		st.write('Circunferência de cintura muito aumentada, o senhor apresenta obesidade.')
+	
+	
+	if (COL < 190):
+		st.write('Colesterol total nos valores recomendado')
+	else:
+		st.write('Colesterol total alto, risco elevado de doenças cardiovasculares.')
+	
+	
+	if (LDL < 130):
+		st.write('LDL normal, abaixo de 130 mg/dl')
+	else:
+		st.write('LDL alto, risco alto de ter problemas cardiovasculares')
+
 		
 if pagina == 'Modelagem':
 	from PIL import Image
