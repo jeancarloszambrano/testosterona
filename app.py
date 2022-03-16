@@ -141,15 +141,15 @@ if pagina == 'Modelo':
 
 
 		if (COL < 190):
-			st.write('Colesterol total nos valores recomendado')
+			st.write('Colesterol total nos valores recomendados.')
 		else:
 			st.write('Colesterol total alto, risco elevado de doenças cardiovasculares.')
 
 
 		if (LDL < 130):
-			st.write('LDL normal, abaixo de 130 mg/dl')
+			st.write('LDL normal, abaixo de 130 mg/dl.')
 		else:
-			st.write('LDL alto, risco alto de ter problemas cardiovasculares')
+			st.write('LDL alto, risco alto de ter problemas cardiovasculares.')
 
 		
 if pagina == 'Modelagem':
