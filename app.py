@@ -56,7 +56,7 @@ if pagina == 'Modelo':
 	image = Image.open('logo.jpg')
 	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
 	st.title('MODELO PARA PREVER DEFICIÊNCIA DE TESTOSTERONA')
-	st.markdown('---')
+	#st.markdown('---')
 	st.write('Por favor, inserir os dados solicitados, tenha em consideração que o modelo esta desenvolvido para homens entre 20 e 85 anos.')
 	
 	# função para carregar o modelo
