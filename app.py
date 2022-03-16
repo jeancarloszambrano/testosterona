@@ -82,7 +82,11 @@ if pagina == 'Modelo':
 	LDL = st.slider("Colesterol LDL: (em mg/dl)", min_value=10, max_value=832, value=130)
 	HAS = st.selectbox("Hipertenso:", ["Sim", "Não"])
 
-	HAS = 1.0 if HAS == 'Sim' else 0.0
+	if HAS == 'Sim'
+		HAS = 1.0
+	else
+		HAS = 0.0
+	#HAS = 1.0 if HAS == 'Sim' else 0.0
 	
 	
 	dados0 = {'Age':[Idade], 'GLI':[GLI], 'TGL':[TGL], 'HDL':[HDL], 'CA':[CA], 'COL':[COL], 'LDL':[LDL], 'HAS':[HAS]}
