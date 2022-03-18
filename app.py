@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from pycaret.classification import load_model, predict_model
 
 
-Menu = ['Home', 'Modelo', 'Modelagem']
+Menu = ['Modelo','Apresentação', 'Modelagem']
 
 from PIL import Image
 LOGO = Image.open('UEFS.png')
@@ -20,10 +20,12 @@ st.sidebar.write('')
 st.sidebar.write('*Monique Tonani Novais*')
 st.sidebar.write('*Anna Paloma Martins Rocha Ribeiro*')
 st.sidebar.write('*Caroline Santos Silva*')
+st.sidebar.write('*Taciana Leonel Nunes Tiraboschi*')
+st.sidebar.write('*Ricardo Gassmann Figueiredo*')
 st.sidebar.write('*Jean Carlos Zambrano Contreras*')
 st.sidebar.write('*José de Bessa Júnior*')
 
-if pagina == 'Home':
+if pagina == 'Apresentação':
 	from PIL import Image
 	image = Image.open('logo.jpg')
 	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
@@ -103,53 +105,53 @@ if pagina == 'Modelo':
 			st.subheader('POSITIVO PARA DEFICIÊNCIA DE TESTOSTERONA')
 	
 		if (HAS == 1):
-			st.write('Homem hipertenso com:')
+			st.write('Homem de ',Idade,' anos, hipertenso com:')
 		else:
-			st.write('Homem sem hipertensão ou pressão arterial controlada com:')
+			st.write('Homem de ',Idade,' anos, sem hipertensão ou pressão arterial controlada com:')
 
 		if (GLI < 70):
-			st.write('Glicemia baixa ou hipoglicemia.') 
+			st.write('- Glicemia baixa ou hipoglicemia.') 
 		elif (GLI >= 70) and (GLI < 100):
-			st.write('Glicemia normal.')
+			st.write('- Glicemia normal.')
 		elif (GLI >= 100) and (GLI <= 125): 
-			st.write('Glicemia alterada.') 
+			st.write('- Glicemia alterada.') 
 		else:
-			st.write('Diabetes ou alta propensão pra desenvolver diabetes. Consulte o seu médico imediatamente.') 
+			st.write('- Diabetes ou alta propensão pra desenvolver diabetes. Consulte o seu médico imediatamente.') 
 
 		if (TGL <= 150):
-			st.write('Triglicerídeos no nivel desejável.')
+			st.write('- Triglicerídeos no nivel desejável.')
 		elif (TGL > 150) and (TGL <= 199):
-			st.write ('Triglicerídeos no limite.')
+			st.write ('- Triglicerídeos no limite.')
 		elif (TGL > 199) and (TGL <= 499):
-			st.write('Triglicerídeos alto.')
+			st.write('- Triglicerídeos alto.')
 		else:
-			st.write('Triglicerídeos muito alto.')
+			st.write('- Triglicerídeos muito alto.')
 
 		if (HDL <= 40):
-			st.write('HDL baixo, Isso significa alto risco de desenvolver doenças cardiovasculares.')
+			st.write('- HDL baixo, Isso significa alto risco de desenvolver doenças cardiovasculares.')
 		elif (HDL > 40) and (HDL <= 60):
-			st.write('HDL abaixo do ideal.')
+			st.write('- HDL abaixo do ideal.')
 		else:
-			st.write('HDL ideal.')
+			st.write('- HDL ideal.')
 
 		if (CA <= 94):
-			st.write('Circunferência de cintura normal.')
+			st.write('- Circunferência de cintura normal.')
 		elif (CA > 94) and (CA < 101):
-			st.write('Circunferência de cintura aumentada.')
+			st.write('- Circunferência de cintura aumentada.')
 		else:
-			st.write('Circunferência de cintura muito aumentada, o senhor apresenta obesidade.')
+			st.write('- Circunferência de cintura muito aumentada, o senhor apresenta obesidade.')
 
 
 		if (COL < 190):
-			st.write('Colesterol total nos valores recomendados.')
+			st.write('- Colesterol total entre os valores recomendados.')
 		else:
-			st.write('Colesterol total alto, risco elevado de doenças cardiovasculares.')
+			st.write('- Colesterol total alto, risco elevado de doenças cardiovasculares.')
 
 
 		if (LDL < 130):
-			st.write('LDL normal, abaixo de 130 mg/dl.')
+			st.write('- LDL normal, abaixo de 130 mg/dl.')
 		else:
-			st.write('LDL alto, risco alto de ter problemas cardiovasculares.')
+			st.write('- LDL alto, risco alto de ter problemas cardiovasculares.')
 
 		
 if pagina == 'Modelagem':
