@@ -114,7 +114,7 @@ if pagina == 'Modelo':
 		elif (GLI >= 70) and (GLI < 100):
 			st.write('- Glicemia normal.')
 		elif (GLI >= 100) and (GLI <= 125): 
-			st.write('- Glicemia alterada.') 
+			st.write('- Glicemia alterada.',GLI, 'mg/dl.') 
 		else:
 			st.write('- Diabetes ou alta propensão pra desenvolver diabetes. Consulte o seu médico imediatamente.') 
 
@@ -125,10 +125,10 @@ if pagina == 'Modelo':
 		elif (TGL > 199) and (TGL <= 499):
 			st.write('- Triglicerídeos alto.')
 		else:
-			st.write('- Triglicerídeos muito alto.')
+			st.write('- Triglicerídeos muito alto.',TGL, 'mg/dl.')
 
 		if (HDL <= 40):
-			st.write('- HDL baixo, Isso significa alto risco de desenvolver doenças cardiovasculares.')
+			st.write('- HDL baixo:',HDL, 'mg/dl. Alto risco de desenvolver doenças cardiovasculares.')
 		elif (HDL > 40) and (HDL <= 60):
 			st.write('- HDL abaixo do ideal.')
 		else:
@@ -137,7 +137,7 @@ if pagina == 'Modelo':
 		if (CA <= 94):
 			st.write('- Circunferência de cintura normal.')
 		elif (CA > 94) and (CA < 101):
-			st.write('- Circunferência de cintura aumentada.')
+			st.write('- Circunferência de cintura aumentada em:',CA, 'cm.')
 		else:
 			st.write('- Circunferência de cintura muito aumentada, o senhor apresenta obesidade.')
 
@@ -145,7 +145,7 @@ if pagina == 'Modelo':
 		if (COL < 190):
 			st.write('- Colesterol total entre os valores recomendados.')
 		else:
-			st.write('- Colesterol total alto, risco elevado de doenças cardiovasculares.')
+			st.write('- Colesterol total em:',COL, 'mg/dl. Colesterol alto, risco elevado de doenças cardiovasculares.')
 
 
 		if (LDL < 130):
