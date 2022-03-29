@@ -45,7 +45,7 @@ if pagina == 'Apresentação':
 		 '(NOVAES et al., 2021).')
 	
 	st.write('Pensando na democratização da ciência e retorno dos resultados das pesquisas, no grupo de pesquisa '+
-		 'em Urologia (Uros) da Universidade Estadual de Feira de Santana, desenvolvemos um aplicativo que permite '+
+		 ' em Urologia (Uros) da Universidade Estadual de Feira de Santana, desenvolvemos um aplicativo que permite '+
 		 'prever a deficiência de testosterona em homens utilizando parâmetros simples com técnicas de Machine Learning (ML)')
 	
 	st.write('**Dr. José de Bessa Júnior**')
