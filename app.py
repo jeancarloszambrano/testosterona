@@ -167,7 +167,7 @@ if pagina == 'Modelagem':
 		 ' por meio de algum tipo de modelo matemático e fazer predições a partir de'+
 		 ' de extrair informações de dados brutos e representá-los '+
 		 ' por meio de algum tipo de modelo matemático e fazer '+
-		 ' novos conjuntos de dados.')
+		 ' novos conjuntos de dados. ')
 		 
 	st.write('Para a modelagem dos dados, foram coletadas informações sob idade, glicemia '+
 		 ' em jejum (mg/dl), triglicerídeos (mg/dl), colesterol total (mg/dl), HDL (mg/dl) e '+
