@@ -31,21 +31,21 @@ if pagina == 'Apresentação':
 	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
 	st.title('APP PARA PREVER DEFICIÊNCIA DE TESTOSTERONA')
 	st.markdown('---')
-	st.write('A testosterona é o hormônio sexual mais importante entre os homens e afeta significativamente'+
-		 'o bem-estar físico e psicológico dos homens. Pacientes com Síndrome de Deficiência de Testosterona (TDS)'+
-		 'podem apresentar hipogonadismo, uma condição definida por baixos níveis séricos de testosterona combinado'+
+	st.write('A testosterona é o hormônio sexual mais importante entre os homens e afeta significativamente '+
+		 'o bem-estar físico e psicológico dos homens. Pacientes com Síndrome de Deficiência de Testosterona (TDS) '+
+		 'podem apresentar hipogonadismo, uma condição definida por baixos níveis séricos de testosterona combinado '+
 		 'com sintomas clínicos. Esta condição está associada a diversas comorbidades, como síndrome metabólica, '+
 		 'doenças cardiovasculares, disfunção erétil, aterosclerose, problemas respiratórios, depressão e outras '+
 		 'complicações que reduzem os indicadores gerais de saúde.'+
-		 'A análise preditiva usando algoritmos de Inteligência Artificial (IA) é de grande interesse para quem'+
-		 'trabalha em diagnóstico médico, pois fornece recursos indispensáveis para análise de dados. As regras'+
+		 'A análise preditiva usando algoritmos de Inteligência Artificial (IA) é de grande interesse para quem '+
+		 'trabalha em diagnóstico médico, pois fornece recursos indispensáveis para análise de dados. As regras '+
 		 'de predição clínica combinam vários preditores com base nos pesos atribuídos a cada preditor, obtendo '+
 		 'um risco ou probabilidade. A probabilidade de ter ou não a doença, que pode ser usada para solicitar '+
-		 'encaminhamento urológico para testes adicionais com base no risco de uma condição de saúde particular'+
+		 'encaminhamento urológico para testes adicionais com base no risco de uma condição de saúde particular '+
 		 '(NOVAES et al., 2021).')
 	
-	st.write('Pensando na democratização da ciência e retorno dos resultados das pesquisas, no grupo de pesquisa'+
-		 'em Urologia (Uros) da Universidade Estadual de Feira de Santana, desenvolvemos um aplicativo que permite'+
+	st.write('Pensando na democratização da ciência e retorno dos resultados das pesquisas, no grupo de pesquisa '+
+		 'em Urologia (Uros) da Universidade Estadual de Feira de Santana, desenvolvemos um aplicativo que permite '+
 		 'prever a deficiência de testosterona em homens utilizando parâmetros simples com técnicas de Machine Learning (ML)')
 	
 	st.write('**Dr. José de Bessa Júnior**')
