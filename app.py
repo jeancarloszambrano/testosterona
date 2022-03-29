@@ -161,31 +161,31 @@ if pagina == 'Modelagem':
 	st.title('MODELAGEM DOS DADOS')
 	st.markdown('---')
 	
-	st.write('Aprendizado de Máquina (ou Machine Learning) é uma das técnicas utilizadas'+
-		 'na Inteligência Artificial que usa algoritmos baseados em matemática e'+
-		 'algoritmos com a finalidade de extrair informações de dados brutos e representá-los'+
-		 'por meio de algum tipo de modelo matemático e fazer predições a partir de'+
-		 'de extrair informações de dados brutos e representá-los'+
-		 'por meio de algum tipo de modelo matemático e fazer'+
-		 'novos conjuntos de dados.')
+	st.write('Aprendizado de Máquina (ou Machine Learning) é uma das técnicas utilizadas '+
+		 ' na Inteligência Artificial que usa algoritmos baseados em matemática e '+
+		 ' algoritmos com a finalidade de extrair informações de dados brutos e representá-los '+
+		 ' por meio de algum tipo de modelo matemático e fazer predições a partir de'+
+		 ' de extrair informações de dados brutos e representá-los '+
+		 ' por meio de algum tipo de modelo matemático e fazer '+
+		 ' novos conjuntos de dados.')
 		 
-	st.write('Para a modelagem dos dados, foram coletadas informações sob idade, glicemia'+
-		 'em jejum (mg/dl), triglicerídeos (mg/dl), colesterol total (mg/dl), HDL (mg/dl) e'+
-		 'LDL (mg/dl), circunferência de cintura (cm), hipertensão arterial (Sim - Não) e'+
-		 'nível de testosterona de 4258 homens com idade entre 20-90 anos da Região'+
-		 'Metropolitana de Feira de Santana.')
+	st.write('Para a modelagem dos dados, foram coletadas informações sob idade, glicemia '+
+		 ' em jejum (mg/dl), triglicerídeos (mg/dl), colesterol total (mg/dl), HDL (mg/dl) e '+
+		 ' LDL (mg/dl), circunferência de cintura (cm), hipertensão arterial (Sim - Não) e '+
+		 ' nível de testosterona de 4258 homens com idade entre 20-90 anos da Região '+
+		 ' Metropolitana de Feira de Santana.')
 	
-	st.write('Nós, testamos diferentes algoritmos de Aprendizado de Máquina para prever a'+
-		 'deficiência de testosterona (testosterona <300 ng/dl) com algoritmos de'+
-		 'aprendizado supervisionado do tipo classificação. A proporção de homens com'+
-		 'deficiência de testosterona na amostra foi de 23,5%, pelo que aplicamos técnicas'+
-		 'oversampling para lidar com os dados desequilibrados (técnica SMOTE).')
+	st.write('Nós, testamos diferentes algoritmos de Aprendizado de Máquina para prever a '+
+		 ' deficiência de testosterona (testosterona <300 ng/dl) com algoritmos de '+
+		 ' aprendizado supervisionado do tipo classificação. A proporção de homens com '+
+		 ' deficiência de testosterona na amostra foi de 23,5%, pelo que aplicamos técnicas '+
+		 ' oversampling para lidar com os dados desequilibrados (técnica SMOTE).')
 	
-	st.write('Dividimos a amostra em amostra de teste (1278 casos) e amostra de treino'+
-		 '(2980 casos), rodamos diferentes algoritmos, e selecionamos os algoritmos que'+
-		 'apresentaram o maior Recall (Sensibilidade), situação em que os Falsos'+
-		 'Negativos são considerados mais prejudiciais que os Falsos Positivos. Os'+
-		 'resultados são apresentados na tabela 1.')
+	st.write('Dividimos a amostra em amostra de teste (1278 casos) e amostra de treino '+
+		 ' (2980 casos), rodamos diferentes algoritmos, e selecionamos os algoritmos que  '+
+		 ' apresentaram o maior Recall (Sensibilidade), situação em que os Falsos '+
+		 ' Negativos são considerados mais prejudiciais que os Falsos Positivos. Os '+
+		 ' resultados são apresentados na tabela 1.')
 	
 	st.write('**Tabela 1. Algoritmos de aprendizado de maquina**')
 	from PIL import Image	 
