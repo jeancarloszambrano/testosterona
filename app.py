@@ -75,13 +75,13 @@ if pagina == 'Modelo':
 	def get_data():
     		return pd.read_csv('testost2.csv')
 
-	Idade = st.slider('Idade', min_value=21, max_value=97, value=60)
-	GLI = st.slider("Glicemia: (em mg/dl)", min_value=10, max_value=384, value=69)
-	TGL = st.slider("Triglicerídeos: (em mg/dl)", min_value=1, max_value=980, value=149)
-	HDL = st.slider("Colesterol HDL:(em mg/dl)", min_value=9, max_value=116, value=61)
-	CA = st.slider("Circunferência de cintura: (em cm)", min_value=43, max_value=198, value=93)
-	COL = st.slider("Colesterol total: (em mg/dl)", min_value=16, max_value=363, value=189)
-	LDL = st.slider("Colesterol LDL: (em mg/dl)", min_value=10, max_value=832, value=129)
+	Idade = st.slider('Idade', min_value=45, max_value=85, step=1)
+	GLI = st.slider("Glicemia: (em mg/dl)", min_value=60, max_value=300, value=69)
+	TGL = st.slider("Triglicerídeos: (em mg/dl)", min_value=60, max_value=500, value=149)
+	HDL = st.slider("Colesterol HDL:(em mg/dl)", min_value=20, max_value=90, value=61)
+	CA = st.slider("Circunferência de cintura: (em cm)", min_value=43, max_value=140, value=93)
+	COL = st.slider("Colesterol total: (em mg/dl)", min_value=50, max_value=360, value=189)
+	LDL = st.slider("Colesterol LDL: (em mg/dl)", min_value=50, max_value=250, value=129)
 	HAS = st.selectbox("Hipertenso:", ["Sim", "Não"])
 
 	
