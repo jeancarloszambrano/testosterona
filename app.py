@@ -75,7 +75,7 @@ if pagina == 'Modelo':
 	def get_data():
     		return pd.read_csv('testost2.csv')
 
-	Idade = st.slider('Idade', min_value=20, max_value=85, step=1)
+	Idade = st.slider('Idade', min_value=20, max_value=85, step=40)
 	GLI = st.slider("Glicemia: (em mg/dl)", min_value=60, max_value=300, value=69)
 	TGL = st.slider("Triglicerídeos: (em mg/dl)", min_value=60, max_value=500, value=149)
 	HDL = st.slider("Colesterol HDL:(em mg/dl)", min_value=20, max_value=90, value=61)
