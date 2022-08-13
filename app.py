@@ -59,7 +59,7 @@ if pagina == 'Modelo':
 	st.image(image, caption=None, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="JPEG")
 	st.title('MODELO PARA PREVER DEFICIÊNCIA DE TESTOSTERONA')
 	#st.markdown('---')
-	st.write('Por favor, inserir os dados solicitados, tenha em consideração que o modelo esta desenvolvido para homens entre 20 e 85 anos.')
+	st.write('Por favor, inserir os dados solicitados, tenha em consideração que o modelo foi desenvolvido para homens entre 20 e 85 anos.')
 	
 	# função para carregar o modelo
 	modelo1 = load_model('Final_Model')
