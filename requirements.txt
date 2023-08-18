@@ -4,4 +4,6 @@ scikit-learn>=1.0
 matplotlib==3.5.1
 pycaret==3.0.0
 numpy==1.24.4
+pip install --upgrade streamlit
+pip install --upgrade pycaret
 
