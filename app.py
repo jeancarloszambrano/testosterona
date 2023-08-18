@@ -95,7 +95,7 @@ if pagina == 'Modelo':
 	#st.markdown('---')
 
 	if st.button('REALIZAR PREDIÇÃO'):
-		pred = float(predict_model(modelo1, data = dados)['Label'].round(0))
+		pred = np.float64(predict_model(modelo1, data = dados)['Label'].round(0))
 		saida = '{:.0f}'.format(pred)
 		#st.subheader(saida)
 		#saida2 = '{:.0f}'.format(pred)
