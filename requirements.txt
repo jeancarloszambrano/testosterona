@@ -1,5 +1,3 @@
-pip install --upgrade streamlit
-pip install --upgrade pycaret
 pandas>=1.3.0
 streamlit==1.24.0
 scikit-learn>=1.0
