@@ -3,5 +3,5 @@ Testosterone is the most important sex hormone among men and significantly affec
 
 Predictive analysis using artificial intelligence (AI) algorithms is of great interest to those working in medical diagnostics, as it provides indispensable resources for data analysis. Clinical prediction rules combine various predictors based on the weights assigned to each predictor, yielding a risk or probability. The probability of having or not having the disease can be used to request a urological referral for additional tests based on the risk of a particular health condition. The present app allows predicting testosterone deficiency in men using simple parameters and machine learning (ML) techniques.
 
-Reference
-Novaes MT, Ferreira De Carvalho OL, Guimarães Ferreira PH, Nunes Tiraboschi TL, Silva CS, Zambrano JC, et al. Prediction of secondary testosterone deficiency using machine learning: A comparative analysis of ensemble and base classifiers, probability calibration, and sampling strategies in a slightly imbalanced dataset Informatics in Medicine Unlocked, 2021, 23:100538
+Reference:
+Novaes MT, Ferreira De Carvalho OL, Guimarães Ferreira PH, Nunes Tiraboschi TL, Silva CS, Zambrano Jean Carlos, et al. Prediction of secondary testosterone deficiency using machine learning: A comparative analysis of ensemble and base classifiers, probability calibration, and sampling strategies in a slightly imbalanced dataset Informatics in Medicine Unlocked, 2021, 23:100538
